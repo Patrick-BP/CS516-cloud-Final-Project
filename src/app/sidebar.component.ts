@@ -54,7 +54,7 @@ import { Component, OnInit } from '@angular/core';
       <div class="contact-info">
         <p class="contact-title">Phone</p>
 
-        <a href="tel:+12133522795" class="contact-link">+1 (469) 215-0557</a>
+        <a href="tel:+12133522795" class="contact-link">+1 (469) 000-5555</a>
       </div>
 
     </li>

@@ -10,7 +10,10 @@ import { PorpofolioComponent } from './porpofolio.component';
 import { BlogComponent } from './blog.component';
 import { ContactComponent } from './contact.component';
 import { IonicModule } from '@ionic/angular';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,11 @@ import { IonicModule } from '@ionic/angular';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

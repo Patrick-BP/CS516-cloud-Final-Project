@@ -78,30 +78,14 @@ import { Component, OnInit } from '@angular/core';
           <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
         </figure>
 
-        <h3 class="project-title">Finance</h3>
+        <h3 class="project-title">Restaurants Management </h3>
 
         <p class="project-category">react native</p>
 
       </a>
     </li>
 
-    <li class="project-item  active" data-filter-item data-category="react native">
-      <a href="#">
 
-        <figure class="project-img">
-          <div class="project-item-icon-box">
-            <ion-icon name="eye-outline"></ion-icon>
-          </div>
-
-          <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-        </figure>
-
-        <h3 class="project-title">Orizon</h3>
-
-        <p class="project-category">react native</p>
-
-      </a>
-    </li>
 
     <li class="project-item  active" data-filter-item data-category="reactjs">
       <a href="#">
@@ -111,10 +95,10 @@ import { Component, OnInit } from '@angular/core';
             <ion-icon name="eye-outline"></ion-icon>
           </div>
 
-          <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+          <img src="./assets/images/project-3.png" alt="fundo" loading="lazy">
         </figure>
 
-        <h3 class="project-title">Fundo</h3>
+        <h3 class="project-title">Movie Night</h3>
 
         <p class="project-category">reactjs</p>
 
@@ -132,7 +116,7 @@ import { Component, OnInit } from '@angular/core';
           <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
         </figure>
 
-        <h3 class="project-title">Brawlhalla</h3>
+        <h3 class="project-title">Goals Tracker</h3>
 
         <p class="project-category">angular</p>
 
@@ -150,31 +134,15 @@ import { Component, OnInit } from '@angular/core';
           <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
         </figure>
 
-        <h3 class="project-title">DSM.</h3>
+        <h3 class="project-title">Movie Streaming</h3>
 
         <p class="project-category">reactjs</p>
 
       </a>
     </li>
 
-    <li class="project-item  active" data-filter-item data-category="reactjs">
-      <a href="#">
-
-        <figure class="project-img">
-          <div class="project-item-icon-box">
-            <ion-icon name="eye-outline"></ion-icon>
-          </div>
-
-          <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-        </figure>
-
-        <h3 class="project-title">MetaSpark</h3>
-
-        <p class="project-category">reactjs</p>
-
-      </a>
-    </li>
-
+    
+    
     <li class="project-item  active" data-filter-item data-category="react native">
       <a href="#">
 
@@ -183,52 +151,19 @@ import { Component, OnInit } from '@angular/core';
             <ion-icon name="eye-outline"></ion-icon>
           </div>
 
-          <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+          <img src="./assets/images/project-8.png" alt="summary" loading="lazy">
         </figure>
 
-        <h3 class="project-title">Summary</h3>
+        <h3 class="project-title">Course Review</h3>
 
         <p class="project-category">react native</p>
 
       </a>
     </li>
 
-    <li class="project-item  active" data-filter-item data-category="angular">
-      <a href="#">
+   
 
-        <figure class="project-img">
-          <div class="project-item-icon-box">
-            <ion-icon name="eye-outline"></ion-icon>
-          </div>
-
-          <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-        </figure>
-
-        <h3 class="project-title">Task Manager</h3>
-
-        <p class="project-category">angular</p>
-
-      </a>
-    </li>
-
-    <li class="project-item  active" data-filter-item data-category="react native">
-      <a href="#">
-
-        <figure class="project-img">
-          <div class="project-item-icon-box">
-            <ion-icon name="eye-outline"></ion-icon>
-          </div>
-
-          <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-        </figure>
-
-        <h3 class="project-title">Arrival</h3>
-
-        <p class="project-category">react native</p>
-
-      </a>
-    </li>
-
+   
   </ul>
 
 </section>

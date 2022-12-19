@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { MessageService } from './message.service';
+import {IMessage} from './message.interface'
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -9,31 +13,28 @@ import { Component, OnInit } from '@angular/core';
   <h2 class="h2 article-title">Contact</h2>
 </header>
 
-<section class="mapbox" data-mapbox>
-  <figure>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-      width="400" height="300" loading="lazy"></iframe>
-  </figure>
-</section>
+
 
 <section class="contact-form">
 
   <h3 class="h3 form-title">Contact Form</h3>
 
-  <form action="#" class="form" data-form>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form" >
 
     <div class="input-wrapper">
-      <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+      <input type="text"  formControlName="GuestName" class="form-input" placeholder="Full name" >
 
-      <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+      <input type="email"  class="form-input"  pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" formControlName="Email" placeholder="Email address" >
     </div>
+    <input type="text"  class="form-input" formControlName="MessageTitle" placeholder="Subject" ><br>
+    <textarea  class="form-input" formControlName="Message" placeholder="Your Message" ></textarea>
 
-    <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-    <button class="form-btn" type="submit" disabled data-form-btn>
-      <ion-icon name="paper-plane"></ion-icon>
-      <span>Send Message</span>
+    <button class="form-btn" type="submit" [disabled]="!form.valid">
+    <div class="spinner-border text-warning" role="status" *ngIf="loading">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+      <ion-icon name="paper-plane"  *ngIf="!loading"></ion-icon>
+      <span  *ngIf="!loading">Send Message</span>
     </button>
 
   </form>
@@ -46,10 +47,31 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class ContactComponent implements OnInit {
+loading:boolean = false;
+message!:IMessage;
+form = inject(FormBuilder).nonNullable.group({
+    MessageTitle:['',Validators.required],
+    Email:['',Validators.required],
+    Message:['',Validators.required],
+    GuestName:['',Validators.required]
+})
 
-  constructor() { }
+
+  constructor(private messageService: MessageService, private toaster: ToastrService) { }
 
   ngOnInit(): void {
   }
+ onSubmit(){
+  this.loading = true
+    this.message = {...this.form.value} as IMessage;
+    this.messageService.saveMessage(this.message).subscribe((response)=>{
+      if(response === "Success"){
+        this.toaster.success('Message sent successfuly');
+        
+        this.form.reset()
+        this.loading = false
+      }
+    })
 
+ }
 }

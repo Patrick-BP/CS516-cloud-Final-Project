@@ -13,21 +13,21 @@ import { Component, OnInit } from '@angular/core';
 
   <ul class="blog-posts-list">
 
-    <li class="blog-post-item">
-      <a href="#">
+   <li class="blog-post-item">
+      <a href="https://github.com/Patrick-BP/myblog/blob/main/How%20to%20deploy%20a%20React%20Application%20on%20AWS%20Amplify.pdf" target="_blank">
 
         <figure class="blog-banner-box">
-          <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+          <img src="./assets/images/blog-1.png" alt="Design conferences in 2022" loading="lazy">
         </figure>
 
         <div class="blog-content">
 
         
 
-          <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+          <h3 class="h3 blog-item-title">How to deploy a React Application on AWS Amplify</h3>
 
           <p class="blog-text">
-            Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+          Learn step by step how to create a react app from scratch and push it to Github, then deploy it to AWS Amplify.
           </p>
 
         </div>
@@ -45,7 +45,7 @@ import { Component, OnInit } from '@angular/core';
         <div class="blog-content">
 
 
-          <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+          <h3 class="h3 blog-item-title">How to deploy a backend Application on AWS Amplify</h3>
 
           <p class="blog-text">
             Coming Soon....
@@ -56,49 +56,7 @@ import { Component, OnInit } from '@angular/core';
       </a>
     </li>
 
-    <li class="blog-post-item">
-      <a href="#">
-
-        <figure class="blog-banner-box">
-          <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-        </figure>
-
-        <div class="blog-content">
-
-          
-
-          <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-          <p class="blog-text">
-          Coming Soon....
-          </p>
-
-        </div>
-
-      </a>
-    </li>
-
-    <li class="blog-post-item">
-      <a href="#">
-
-        <figure class="blog-banner-box">
-          <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-        </figure>
-
-        <div class="blog-content">
-
-          
-
-          <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-          <p class="blog-text">
-            Coming Soon....
-          </p>
-
-        </div>
-
-      </a>
-    </li>
+ 
 
 
   </ul>
