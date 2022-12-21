@@ -29,7 +29,7 @@ import { Component, OnInit } from '@angular/core';
 
   <div class="separator"></div>
 
-  <ul class="contacts-list">
+  <ul class="contacts-list" >
 
     <li class="contact-item">
 
@@ -117,7 +117,11 @@ import { Component, OnInit } from '@angular/core';
 
 </aside>
   `,
-  styles: [
+  styles: [`
+  .contacts-list{
+    padding-left:0px;
+  }
+  `
   ]
 })
 export class SidebarComponent implements OnInit {
